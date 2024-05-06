@@ -6,6 +6,10 @@ public class MetodoMenu {
     public static void mostrarMenu(){
         System.out.println("Bienvenido al programa para mostrar tablas de multiplicar");
         Scanner reader = new Scanner(System.in);
+
+        System.out.println("Ingrese su nombre: ");
+        String nombreUsuario = reader.next();
+
         int opcionSelector = 0;
         boolean salir = false;
         int tablaMaxima = 5;
@@ -25,6 +29,7 @@ public class MetodoMenu {
                         numeroSeleccionado = reader.nextInt();    
                     } while (numeroSeleccionado < 2 || numeroSeleccionado > 5);
                     MetodoMultiplicar.imprimirMultiplicacion(numeroSeleccionado);
+                    System.out.println("Un saludo " + nombreUsuario);
                     break;
                 
                 case 2:
