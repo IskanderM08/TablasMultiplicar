@@ -21,16 +21,16 @@ public class MetodoMenu {
             switch (opcionSelector) {
                 case 1:
                     do {
-                        System.out.println("Ingrese un número del 1 al 5");
+                        System.out.println("Ingrese un número del 2 al 5");
                         numeroSeleccionado = reader.nextInt();    
-                    } while (numeroSeleccionado < 1 || numeroSeleccionado > 5);
-                    imprimirMultiplicacion(numeroSeleccionado);
+                    } while (numeroSeleccionado < 2 || numeroSeleccionado > 5);
+                    MetodoMultiplicar.imprimirMultiplicacion(numeroSeleccionado);
                     break;
                 
                 case 2:
                     for (int i = 2; i <= tablaMaxima; i++) {
-                        imprimirMultiplicacion(i);
-                        System.out.println("=====");
+                        MetodoMultiplicar.imprimirMultiplicacion(i);
+                        System.out.println("=============");
                     }
                     break;
 
@@ -46,12 +46,5 @@ public class MetodoMenu {
             }    
         } while (!salir);
         
-    }
-
-    public static void imprimirMultiplicacion(int numeroTabla){
-        int maximo = 10;
-        for (int i = 1; i <= maximo; i++) {
-            System.out.println(numeroTabla + " * " + i + " = " + (numeroTabla*i));
-        }
     }
 }
